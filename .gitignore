@@ -1,0 +1,16 @@
+#Para evitar archivos de entorno y compilados
+__pycache__/
+*.py[cod]
+*.log
+.env
+*.sqlite3
+.DS_Store
+
+#Archivos de VS Code
+.vscode/
+*.code-workspace
+
+#Archivos temporales
+*.swp
+*.tmp
+*.bak
