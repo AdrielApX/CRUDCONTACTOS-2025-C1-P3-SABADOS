@@ -3,10 +3,14 @@ import json
 
 CONTACTOS_FILE = 'contactos.json'
 
-def cargar_contactos():#cargar contactos
+#cargar contactos
+def cargar_contactos():
     try:
         with open(CONTACTOS_FILE, 'r') as archivo:
-            return json.load(archivo)
+            contenido = archivo.read()
+            if not contenido.strip():  #mensaje por si está vacío
+                return []
+            return json.loads(contenido)
     except FileNotFoundError:
         return []
 
